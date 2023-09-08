@@ -1,0 +1,67 @@
+{
+	"info": {
+		"_postman_id": "8433c766-37ff-470f-9314-60051d34944d",
+		"name": "ApiRestJava",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "13264719"
+	},
+	"item": [
+		{
+			"name": "api/v1/customers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/app/v1/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "app/v1/customers",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombre\" : \"Daniela\",\r\n    \"apellido\" : \"Martinez Praado\",\r\n    \"dni\" : \"45896532\",\r\n    \"email\" : \"daniela.martinez@domain.com\",\r\n    \"fechaNacimiento\" : \"1995-03-01\",\r\n    \"fechaCreacion\" : \"2023-09-07\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/app/v1/customers"
+			},
+			"response": []
+		},
+		{
+			"name": "app/v1/customers/dni",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "http://localhost:8080/app/v1/customers/dni/45896236"
+			},
+			"response": []
+		},
+		{
+			"name": "api/v1/customers/email",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "http://localhost:8080/app/v1/customers/email/isabel.mendoza@domain.com"
+			},
+			"response": []
+		}
+	]
+}
